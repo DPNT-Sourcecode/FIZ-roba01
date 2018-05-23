@@ -74,12 +74,15 @@ namespace BeFaster.App.Solutions
 
         private static bool OddNumber(int number)
         {
-            if (number <= 10) return false;
 
 
             string numberStr = number.ToString();
             char firstSymbol = numberStr[0];
             var res = false;
+
+            if (number <= 10) res = true;
+
+
             foreach (var num in number.ToString())
             {
                 if (num != firstSymbol)
