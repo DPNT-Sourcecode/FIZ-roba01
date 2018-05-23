@@ -23,18 +23,23 @@ namespace BeFaster.App.Solutions
 
             }
 
-            string deluxe = ;
+            string deluxe = "";
             if (Deluxe(number))
             {
                 if (OddNumber(number))
                 {
-                    res += "fake deluxe";
+                    deluxe += "fake deluxe";
                 }
                 else
                 {
-                    res += "deluxe";
+                    deluxe += "deluxe";
                 }
             }
+
+            if (res == String.Empty)
+                res = deluxe;
+            else
+                res += " " + deluxe;
 
             return res == String.Empty ? number.ToString() : res;
 
