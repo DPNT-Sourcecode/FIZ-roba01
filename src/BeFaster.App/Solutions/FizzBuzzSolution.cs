@@ -35,6 +35,8 @@ namespace BeFaster.App.Solutions
                     deluxe += "deluxe";
                 }
             }
+
+
             //if (OddNumber(number))
             //{
             //    if (Deluxe(number))
@@ -56,8 +58,8 @@ namespace BeFaster.App.Solutions
 
         private static bool Deluxe(int number)
         {
-            if (!((number % 3 == 0 && number.ToString().Contains("3")) || (number % 5 == 0 && number.ToString().Contains("5"))))
-                return false;
+            if (((number % 3 == 0 && number.ToString().Contains("3")) || (number % 5 == 0 && number.ToString().Contains("5")))
+                return true;
 
             //string numberStr = number.ToString();
             //char firstSymbol = numberStr[0];
@@ -68,19 +70,14 @@ namespace BeFaster.App.Solutions
             //        return true;
             //    }
             //}
-            return true;
-
+            return false;
         }
 
         private static bool OddNumber(int number)
         {
-
-
             string numberStr = number.ToString();
             char firstSymbol = numberStr[0];
             var res = false;
-
-            if (number <= 10) return true; ;
 
 
             foreach (var num in number.ToString())
