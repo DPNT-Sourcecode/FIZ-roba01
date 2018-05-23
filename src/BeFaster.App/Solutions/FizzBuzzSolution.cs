@@ -59,10 +59,10 @@ namespace BeFaster.App.Solutions
             {
                 if (num != firstSymbol)
                 {
-                    return true;
+                    return false;
                 }
             }
-            return false;
+            return true;
 
         }
 
