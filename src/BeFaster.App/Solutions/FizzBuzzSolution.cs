@@ -1,4 +1,5 @@
 ﻿using BeFaster.Runner.Exceptions;
+using System;
 
 namespace BeFaster.App.Solutions
 {
@@ -16,19 +17,24 @@ namespace BeFaster.App.Solutions
             if (number % 5 == 0 || number.ToString().Contains("5"))
                 res += "buzz ";
 
-            if (FakeDeluxe(number))
-                res += "fake deluxe";
-            else if(Deluxe(number))
-                res += "deluxe";
 
-            return res == String.Empty 
+            if (Deluxe(number))
+            {
+                if (FakeDeluxe(number))
+                {
+                    res += "fake deluxe";
+                }
+                else
+                {
+                    res += "deluxe";
+                }
+            }
+            //if (FakeDeluxe(number))
+            //    res += "fake deluxe";
+            //else if(Deluxe(number))
+            //    res += "deluxe";
 
-            return number.ToString();
-
-
-
-
-
+            return res == String.Empty ? number.ToString() : res;
 
 
             //if (FakeDeluxe(number))
@@ -74,12 +80,10 @@ namespace BeFaster.App.Solutions
 
         private static bool FakeDeluxe(int number)
         {
-            if (Deluxe(number))
-            {
-                if (number % 2 != 0)
-                    return true;
-            }
-            return false;
+            if (number % 2 != 0)
+                return true;
+            else
+                return false;
         }
     }
 }
