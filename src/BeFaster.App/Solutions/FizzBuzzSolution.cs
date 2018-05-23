@@ -14,13 +14,13 @@ namespace BeFaster.App.Solutions
                 (number % 3 == 0 || number.ToString().Contains("3")) 
                 && Deluxe(number)) return "fizz buzz deluxe";
 
-            if ((number > 10 && Deluxe(number)) && (number % 5 == 0 || number.ToString().Contains("5")))
+            if ((Deluxe(number)) && (number % 5 == 0 || number.ToString().Contains("5")))
                 return "buzz deluxe";
 
-            if ((number > 10 && Deluxe(number)) && (number % 3 == 0 || number.ToString().Contains("3")))
+            if ((Deluxe(number)) && (number % 3 == 0 || number.ToString().Contains("3")))
                 return "fizz deluxe";
 
-            if (number > 10 && Deluxe(number))
+            if (Deluxe(number))
                 return "deluxe";
 
             if ((number % 5 == 0 || number.ToString
@@ -39,14 +39,18 @@ namespace BeFaster.App.Solutions
 
         private static bool Deluxe(int number)
         {
-            string numberStr = number.ToString();
-            char firstSymbol = numberStr[0];
-            foreach(var num in number.ToString())
+            if(number > 10)
             {
-                if (num != firstSymbol)
-                    return false;
+                string numberStr = number.ToString();
+                char firstSymbol = numberStr[0];
+                foreach (var num in number.ToString())
+                {
+                    if (num != firstSymbol)
+                        return false;
+                }
+                return true;
             }
-            return true;
+            return false;
         }
 
         private static bool FakeDeluxe(int number)
