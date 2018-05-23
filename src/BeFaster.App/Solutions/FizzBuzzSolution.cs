@@ -20,7 +20,7 @@ namespace BeFaster.App.Solutions
 
             if (Deluxe(number))
             {
-                if (FakeDeluxe(number))
+                if (OddNumber(number))
                 {
                     res += "fake deluxe";
                 }
@@ -29,10 +29,6 @@ namespace BeFaster.App.Solutions
                     res += "deluxe";
                 }
             }
-            //if (FakeDeluxe(number))
-            //    res += "fake deluxe";
-            //else if(Deluxe(number))
-            //    res += "deluxe";
 
             return res == String.Empty ? number.ToString() : res;
 
@@ -78,12 +74,12 @@ namespace BeFaster.App.Solutions
             return true;
         }
 
-        private static bool FakeDeluxe(int number)
+        private static bool OddNumber(int number)
         {
-            if (number % 2 != 0)
-                return true;
-            else
+            if (number % 2 == 0)
                 return false;
+            else
+                return true;
         }
     }
 }
