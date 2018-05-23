@@ -49,7 +49,7 @@ namespace BeFaster.App.Solutions
 
         private static bool Deluxe(int number)
         {
-            //if (number <= 10) return false;
+            if (number <= 10) return false;
 
             string numberStr = number.ToString();
             char firstSymbol = numberStr[0];
