@@ -26,14 +26,11 @@ namespace BeFaster.App.Solutions
             string deluxe = "";
             if (Deluxe(number))
             {
-                if (OddNumber(number))
-                {
-                    deluxe += "fake deluxe";
-                }
-                else
-                {
-                    deluxe += "deluxe";
-                }
+                deluxe += "deluxe";
+            }
+            else if(OddNumber(number))
+            {
+                deluxe += "fake deluxe";
             }
 
             if (res == String.Empty)
