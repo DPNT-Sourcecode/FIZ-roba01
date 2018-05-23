@@ -39,7 +39,10 @@ namespace BeFaster.App.Solutions
             if (res == String.Empty)
                 res = deluxe;
             else
-                res += " " + deluxe;
+            {
+                if (deluxe != string.Empty)
+                    res += " " + deluxe;
+            }
 
             return res == String.Empty ? number.ToString() : res;
 
