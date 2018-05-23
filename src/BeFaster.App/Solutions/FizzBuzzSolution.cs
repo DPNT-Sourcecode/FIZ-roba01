@@ -53,7 +53,7 @@ namespace BeFaster.App.Solutions
         {
             if (Deluxe(number))
             {
-                if (number % 2 == 0)
+                if (number % 2 != 0)
                     return true;
             }
             return false;
