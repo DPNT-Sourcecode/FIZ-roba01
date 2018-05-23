@@ -9,24 +9,26 @@ namespace BeFaster.App.Solutions
         {
             //i know that bad, but i have to do it fast
             string res = "";
-
+            string fizz = "";
+            string buzz = "";
+            string deluxe = "";
 
             if (number % 3 == 0 || number.ToString().Contains("3"))
-                res += "fizz ";
+                fizz = "fizz";
 
             if (number % 5 == 0 || number.ToString().Contains("5"))
-                res += "buzz ";
+                buzz = "buzz";
 
 
             if (Deluxe(number))
             {
                 if (OddNumber(number))
                 {
-                    res += "fake deluxe";
+                    deluxe = "fake deluxe";
                 }
                 else
                 {
-                    res += "deluxe";
+                    deluxe = "deluxe";
                 }
             }
 
