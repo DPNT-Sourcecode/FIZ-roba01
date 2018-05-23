@@ -7,8 +7,16 @@ namespace BeFaster.App.Solutions
         public static string FizzBuzz(int number)
         {
             //i know that bad, but i have to do it fast
+            string res = "";
+
+
+            if (number % 3 == 0 || number.ToString().Contains("3"))
+                return "fizz";
+
+
+
             if (FakeDeluxe(number))
-                return "fake deluxe";
+                res += "fake deluxe";
 
             if ((number % 5 == 0 || number.ToString().Contains("5")) &&
                 (number % 3 == 0 || number.ToString().Contains("3")) 
@@ -28,8 +36,7 @@ namespace BeFaster.App.Solutions
                 (number % 3 == 0 || number.ToString().Contains("3")))
                 return "fizz buzz";
 
-            if (number % 3 == 0 || number.ToString().Contains("3"))
-                return "fizz";
+            
 
             if (number % 5 == 0 || number.ToString().Contains("5"))
                 return "buzz";
