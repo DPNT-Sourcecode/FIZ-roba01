@@ -50,7 +50,8 @@ namespace BeFaster.App.Solutions
         private static bool Deluxe(int number)
         {
             if (number <= 10) return false;
-            bool result = false;
+            if (!((number % 3 == 0 || number.ToString().Contains("3")) || (number % 5 == 0 || number.ToString().Contains("5"))))
+                return false;
 
             string numberStr = number.ToString();
             char firstSymbol = numberStr[0];
@@ -58,13 +59,10 @@ namespace BeFaster.App.Solutions
             {
                 if (num != firstSymbol)
                 {
-                    result = true;
-                    break;
+                    return true;
                 }
             }
-            if (!((number % 3 == 0 || number.ToString().Contains("3")) || (number % 5 == 0 || number.ToString().Contains("5"))))
-                result = false;
-            return result;
+            return false;
         }
 
         private static bool OddNumber(int number)
