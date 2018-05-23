@@ -22,6 +22,7 @@ namespace BeFaster.App.Solutions
                     res += " buzz";
             }
 
+
             string deluxe = "";
             if (Deluxe(number))
             {
@@ -52,16 +53,16 @@ namespace BeFaster.App.Solutions
             //if (!((number % 3 == 0 || number.ToString().Contains("3")) || (number % 5 == 0 || number.ToString().Contains("5"))))
             //    return false;
 
-            //string numberStr = number.ToString();
-            //char firstSymbol = numberStr[0];
-            //foreach (var num in number.ToString())
-            //{
-            //    if (num != firstSymbol)
-            //    {
-            //        return true;
-            //    }
-            //}
-            //return false;
+            string numberStr = number.ToString();
+            char firstSymbol = numberStr[0];
+            foreach (var num in number.ToString())
+            {
+                if (num != firstSymbol)
+                {
+                    return true;
+                }
+            }
+            return false;
 
         }
 
