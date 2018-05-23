@@ -45,33 +45,6 @@ namespace BeFaster.App.Solutions
             }
 
             return res == String.Empty ? number.ToString() : res;
-
-
-            //if (FakeDeluxe(number))
-            //    res += "fake deluxe";
-
-            //if ((number % 5 == 0 || number.ToString().Contains("5")) &&
-            //    (number % 3 == 0 || number.ToString().Contains("3")) 
-            //    && Deluxe(number)) return "fizz buzz deluxe";
-
-            //if ((Deluxe(number)) && (number % 5 == 0 || number.ToString().Contains("5")))
-            //    return "buzz deluxe";
-
-            //if ((Deluxe(number)) && (number % 3 == 0 || number.ToString().Contains("3")))
-            //    return "fizz deluxe";
-
-            //if (Deluxe(number))
-            //    return "deluxe";
-
-            //if ((number % 5 == 0 || number.ToString
-            //    ().Contains("5")) &&
-            //    (number % 3 == 0 || number.ToString().Contains("3")))
-            //    return "fizz buzz";
-
-
-
-
-
         }
 
         private static bool Deluxe(int number)
