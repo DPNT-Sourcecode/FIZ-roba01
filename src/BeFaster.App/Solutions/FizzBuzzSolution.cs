@@ -26,8 +26,7 @@ namespace BeFaster.App.Solutions
             string deluxe = "";
             if (Deluxe(number))
             {
-
-                if (OddNumber(number) && number < 11)
+                if (OddNumber(number))
                 {
                     deluxe += "fake deluxe";
                 }
@@ -81,6 +80,7 @@ namespace BeFaster.App.Solutions
             char firstSymbol = numberStr[0];
             var res = false;
 
+            if (number <= 10) return true; ;
 
 
             foreach (var num in number.ToString())
