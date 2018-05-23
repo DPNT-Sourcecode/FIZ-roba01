@@ -50,7 +50,7 @@ namespace BeFaster.App.Solutions
         private static bool Deluxe(int number)
         {
             //if (number <= 10) return false;
-            if (!((number % 3 == 0 || number.ToString().Contains("3")) || (number % 5 == 0 || number.ToString().Contains("5"))))
+            if (!((number % 3 == 0 && number.ToString().Contains("3")) || (number % 5 == 0 && number.ToString().Contains("5"))))
                 return false;
 
             string numberStr = number.ToString();
@@ -59,10 +59,10 @@ namespace BeFaster.App.Solutions
             {
                 if (num != firstSymbol)
                 {
-                    return false;
+                    return true;
                 }
             }
-            return true;
+            return false;
 
         }
 
