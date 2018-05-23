@@ -49,21 +49,24 @@ namespace BeFaster.App.Solutions
 
         private static bool Deluxe(int number)
         {
-            //if (number <= 10) return false;
+            if (number <= 10) return false;
+            bool result = false;
 
-            //string numberStr = number.ToString();
-            //char firstSymbol = numberStr[0];
-            //foreach (var num in number.ToString())
-            //{
-            //    if (num != firstSymbol)
-            //        return true;
-            //}
-            //return false;
-            if (number % 3 == 0 || number.ToString().Contains("3"))
-                return true;
-            if (number % 5 == 0 || number.ToString().Contains("5"))
-                return true;
-            return false;
+            string numberStr = number.ToString();
+            char firstSymbol = numberStr[0];
+            foreach (var num in number.ToString())
+            {
+                if (num != firstSymbol)
+                {
+                    result = true;
+                    break;
+                }
+            }
+            if (!(number % 3 == 0 || number.ToString().Contains("3")))
+                result = false;
+            if (!(number % 5 == 0 || number.ToString().Contains("5")))
+                result = false;
+            return result;
         }
 
         private static bool OddNumber(int number)
