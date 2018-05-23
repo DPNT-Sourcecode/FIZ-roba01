@@ -7,7 +7,7 @@ namespace BeFaster.App.Solutions
     {
         public static string FizzBuzz(int number)
         {
-            //i don't understand
+            //i don't understand !!
             string res = "";
 
 
