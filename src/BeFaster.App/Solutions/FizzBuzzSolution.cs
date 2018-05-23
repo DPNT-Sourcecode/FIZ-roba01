@@ -62,9 +62,7 @@ namespace BeFaster.App.Solutions
                     break;
                 }
             }
-            if (!(number % 3 == 0 || number.ToString().Contains("3")))
-                result = false;
-            if (!(number % 5 == 0 || number.ToString().Contains("5")))
+            if (!((number % 3 == 0 || number.ToString().Contains("3")) || (number % 5 == 0 || number.ToString().Contains("5"))))
                 result = false;
             return result;
         }
