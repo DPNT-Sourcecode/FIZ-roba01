@@ -20,7 +20,8 @@ namespace BeFaster.App.Solutions
             if (number > 10 && Deluxe(number))
                 return "deluxe";
 
-            if ((number % 5 == 0 || number.ToString().Contains("5")) &&
+            if ((number % 5 == 0 || number.ToString
+                ().Contains("5")) &&
                 (number % 3 == 0 || number.ToString().Contains("3")))
                 return "fizz buzz";
 
@@ -43,6 +44,15 @@ namespace BeFaster.App.Solutions
                     return false;
             }
             return true;
+        }
+
+        private static bool FakeDeluxe(number)
+        {
+            bool result = false
+            if (Deluxe)
+            {
+
+            }
         }
     }
 }
