@@ -10,13 +10,26 @@ namespace BeFaster.App.Solutions
             if ((number % 5 == 0 || number.ToString().Contains("5")) &&
                 (number % 3 == 0 || number.ToString().Contains("3")) 
                 && Deluxe(number)) return "fizz buzz deluxe";
-            if (number > 10 && Deluxe(number) && (number % 5 == 0 || number.ToString().Contains("5"))) return "deluxe";
-            if (number > 10 && Deluxe(number) && (number % 3 == 0 || number.ToString().Contains("3")) return "deluxe";
-            if (number > 10 && Deluxe(number)) return "deluxe";
+
+            if ((number > 10 && Deluxe(number)) && (number % 5 == 0 || number.ToString().Contains("5")))
+                return "buzz deluxe";
+
+            if ((number > 10 && Deluxe(number)) && (number % 3 == 0 || number.ToString().Contains("3")))
+                return "fizz deluxe";
+
+            if (number > 10 && Deluxe(number))
+                return "deluxe";
+
             if ((number % 5 == 0 || number.ToString().Contains("5")) &&
-                (number % 3 == 0 || number.ToString().Contains("3"))) return "fizz buzz";
-            if (number % 3 == 0 || number.ToString().Contains("3")) return "fizz";
-            if (number % 5 == 0 || number.ToString().Contains("5")) return "buzz";
+                (number % 3 == 0 || number.ToString().Contains("3")))
+                return "fizz buzz";
+
+            if (number % 3 == 0 || number.ToString().Contains("3"))
+                return "fizz";
+
+            if (number % 5 == 0 || number.ToString().Contains("5"))
+                return "buzz";
+
             return number.ToString();
         }
 
