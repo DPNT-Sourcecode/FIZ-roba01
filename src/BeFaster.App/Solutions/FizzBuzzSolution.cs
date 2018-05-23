@@ -58,7 +58,7 @@ namespace BeFaster.App.Solutions
 
         private static bool Deluxe(int number)
         {
-            if (((number % 3 == 0 && number.ToString().Contains("3")) || (number % 5 == 0 && number.ToString().Contains("5")))
+            if ((number % 3 == 0 && number.ToString().Contains("3")) || (number % 5 == 0 && number.ToString().Contains("5")))
                 return true;
 
             //string numberStr = number.ToString();
@@ -78,7 +78,6 @@ namespace BeFaster.App.Solutions
             string numberStr = number.ToString();
             char firstSymbol = numberStr[0];
             var res = false;
-
 
             foreach (var num in number.ToString())
             {
