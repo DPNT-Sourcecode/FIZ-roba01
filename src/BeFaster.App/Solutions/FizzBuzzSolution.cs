@@ -75,20 +75,26 @@ namespace BeFaster.App.Solutions
         private static bool OddNumber(int number)
         {
             if (number <= 10) return false;
+
+
             string numberStr = number.ToString();
             char firstSymbol = numberStr[0];
+            var res = false;
             foreach (var num in number.ToString())
             {
                 if (num != firstSymbol)
                 {
-                    return true;
+                    res = true;
+                    break;
                 }
             }
 
             if (number % 2 == 0)
-                return false;
+                res = false;
             else
-                return true;
+                res = true;
+
+            return res;
         }
     }
 }
