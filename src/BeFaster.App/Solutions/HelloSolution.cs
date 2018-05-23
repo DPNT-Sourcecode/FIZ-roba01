@@ -7,7 +7,7 @@ namespace BeFaster.App.Solutions
         public static string Hello(string friendName)
         {
             //ignore friendName now
-            return "Hello, world!";
+            return "Hello, World!";
         }
     }
 }
